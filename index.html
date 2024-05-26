@@ -177,6 +177,61 @@
       text-align: justify;
     }
 
+
+
+
+    /* About Me Section */
+    #aboutMe {
+      position: relative;
+    }
+
+    .aboutMe-section-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      /* Align items vertically centered */
+      gap: 1rem;
+    }
+
+    .aboutMe-pic-container {
+      flex: 0 0 30%;
+      /* Adjust width as needed */
+    }
+
+    .about-pic {
+      height: 400px;
+      /* Set height to 200px */
+      border-radius: 1rem;
+    }
+
+    .aboutMe-details-container {
+      flex: 1;
+      /* Take remaining space */
+      padding: 1rem;
+    }
+
+    .aboutMe-text-container {
+      text-align: justify;
+    }
+
+    @media screen and (max-width: 768px) {
+      .aboutMe-section-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .aboutMe-pic-container,
+      .aboutMe-details-container {
+        flex: 1 1 100%;
+        padding: 0.5rem;
+      }
+    }
+
+
+
+
     #about {
       position: relative;
     }
@@ -434,18 +489,18 @@
     </div>
   </section>
 
-  
-  <section id="about">
+
+
+
+  <section id="aboutMe">
     <h1 class="title">Biography</h1>
     <br>
-    <div class="section-container">
-
-      <div class="section__pic-container">
-        <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
+    <div class="aboutMe-section-container">
+      <div class="aboutMe-pic-container">
+        <img src="./assets/rakib.jpg" alt="Profile picture" class="about-pic" />
       </div>
-
-      <div class="about-details-container">
-        <div class="text-container">
+      <div class="aboutMe-details-container">
+        <div class="aboutMe-text-container">
           <p align="justify">
             Rakib Hasan is currently pursuing a Bachelor of Science degree in Computer Science and Engineering at
             Daffodil International University. He is competent in several programming languages, such as C, Java,
@@ -459,6 +514,8 @@
       </div>
     </div>
   </section>
+
+
 
 
 
