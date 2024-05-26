@@ -201,12 +201,6 @@
       border-radius: 2rem;
     }
 
-    .arrow {
-      position: absolute;
-      right: -5rem;
-      bottom: 2.5rem;
-    }
-
     .details-container {
       padding: 1.5rem;
       flex: 1;
@@ -276,7 +270,6 @@
 
     .project {
       width: calc(33.33% - 2rem);
-      /* Adjust according to your preference */
       margin-bottom: 2rem;
     }
 
@@ -299,6 +292,7 @@
     .project-btn {
       margin-top: 1rem;
     }
+
 
     /* CONTACT */
 
@@ -339,6 +333,20 @@
 
     .email-icon {
       height: 2.5rem;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+      .project {
+        width: calc(50% - 1rem);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .project {
+        width: 100%;
+      }
     }
 
     /* Media Queries */
@@ -425,6 +433,8 @@
 
     </div>
   </section>
+
+  
   <section id="about">
     <h1 class="title">Biography</h1>
     <br>
