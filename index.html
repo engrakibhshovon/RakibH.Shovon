@@ -14,13 +14,8 @@
     * {
       margin: 0;
       padding: 0;
-    }
-
-
-    * {
       font-family: 'Times New Roman';
     }
-
 
     .title {
       font-size: 2rem;
@@ -29,10 +24,6 @@
 
     body {
       font-family: "Poppins", sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     p {
@@ -57,7 +48,7 @@
     }
 
     .section-container {
-      display: flex;
+      display: flex; 
     }
 
     /* PROFILE SECTION */
@@ -170,20 +161,7 @@
       gap: 1rem;
     }
 
-
     /* ABOUT SECTION */
-
-    .text-container {
-      text-align: justify;
-    }
-
-
-
-
-    /* About Me Section */
-    #aboutMe {
-      position: relative;
-    }
 
     .aboutMe-section-container {
       display: flex;
@@ -191,24 +169,19 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
-      /* Align items vertically centered */
-      gap: 1rem;
     }
 
     .aboutMe-pic-container {
       flex: 0 0 30%;
-      /* Adjust width as needed */
     }
 
     .about-pic {
       height: 400px;
-      /* Set height to 200px */
       border-radius: 1rem;
     }
 
     .aboutMe-details-container {
       flex: 1;
-      /* Take remaining space */
       padding: 1rem;
     }
 
@@ -228,9 +201,6 @@
         padding: 0.5rem;
       }
     }
-
-
-
 
     #about {
       position: relative;
@@ -351,7 +321,6 @@
       margin-top: 1rem;
     }
 
-
     /* CONTACT */
 
     #contact {
@@ -393,8 +362,6 @@
       height: 2.5rem;
     }
 
-
-
     @media screen and (max-width: 768px) {
       .project {
         width: calc(50% - 1rem);
@@ -425,26 +392,10 @@
     }
 
     @media screen and (max-width: 1200px) {
-      #desktop-nav {
-        display: none;
-      }
-
-      #hamburger-nav {
-        display: flex;
-      }
-
-      #experience,
-      .experience-details-container {
-        margin-top: 2rem;
-      }
 
       #profile,
       .section-container {
         display: block;
-      }
-
-      .arrow {
-        display: none;
       }
 
       section,
@@ -481,11 +432,11 @@
       <h1 class="title1">Rakib Hasan</h1>
       <p class="section__text__p2">Self-Motivated | Ambivert | Fast-Learner</p>
       <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/CV1.pdf')">
-          Download CV
+        <button class="btn btn-color-2" onclick="location.href='./#aboutMe'">
+          Biography
         </button>
         <button class="btn btn-color-2" onclick="location.href='./#contact'">
-          Contact Info
+          Contact
         </button>
       </div>
 
@@ -497,7 +448,6 @@
 
   <section id="aboutMe">
     <h1 class="title">Biography</h1>
-    <br>
     <div class="aboutMe-section-container">
       <div class="aboutMe-pic-container">
         <img src="./assets/rakib.jpg" alt="Profile picture" class="about-pic" />
@@ -517,9 +467,6 @@
       </div>
     </div>
   </section>
-
-
-
 
 
   <section id="experience">
@@ -582,7 +529,8 @@
 
         <div class="details-container">
           <div class="article-container">
-            <p align="justify">R. Hasan, M. Islam, M. M. Hosen, M. Abdullah-Al-Kafi and N. Radhakrishnan, "Predicting
+            <p align="justify"><b><i>R. Hasan</i></b>, M. Islam, M. M. Hosen, M. Abdullah-Al-Kafi and N. Radhakrishnan,
+              "Predicting
               Diabetes in Women through Machine Learning," 2024 11th International Conference on Computing for
               Sustainable Global Development (INDIACom), New Delhi, India, 2024, pp. 1307-1311, doi:
               10.23919/INDIACom61295.2024.10499129.
@@ -604,7 +552,8 @@
 
         <div class="details-container">
           <div class="article-container">
-            <p align="justify">R. Hasan, F. Hasan, M. Hasan, M. Islam, M. Abdullah-Al-Kafi and M. Karmakar, "Classifying
+            <p align="justify"><b><i>R. Hasan</i></b>, F. Hasan, M. Hasan, M. Islam, M. Abdullah-Al-Kafi and M.
+              Karmakar, "Classifying
               Different Types of Smokers and Drinkers by Analyzing Body Signals using Machine Learning," 2024 11th
               International Conference on Computing for Sustainable Global Development (INDIACom), New Delhi, India,
               2024, pp. 1060-1064, doi: 10.23919/INDIACom61295.2024.10499139.
@@ -709,7 +658,11 @@
             <img src="./assets/motu.png" alt="Voice Assistant MOTU" class="project-img" />
           </div>
           <h2 class="experience-sub-title project-title">MOTU</h2>
-          <p align="justify">MOTU Voice Assistant, developed using Python, takes action by user commands, improving productivity by managing tasks like weather updates, time telling, providing top news, and information from online sources, playing videos from YouTube, telling jokes, random facts, and more. The purpose of the project is to build an application to reduce manual work and improve user productivity, and I named the assistant MOTU.
+          <p align="justify">MOTU Voice Assistant, developed using Python, takes action by user commands, improving
+            productivity by managing tasks like weather updates, time telling, providing top news, and information from
+            online sources, playing videos from YouTube, telling jokes, random facts, and more. The purpose of the
+            project is to build an application to reduce manual work and improve user productivity, and I named the
+            assistant MOTU.
           </p>
           <br>
           <div class="btn-container">
@@ -753,7 +706,11 @@
             <img src="./assets/library.png" alt="Library Management System" class="project-img" />
           </div>
           <h2 class="experience-sub-title project-title">L.M.S</h2>
-          <p align="justify">Library Management System is built using C to manage the details of Admin, User, and Books. Librarian and his assistants are the admin and students and faculty members are the users of this system. The project is built at the administrator's end, so only the administrator has access. The purpose of the project is to build an application to reduce the manual work for managing the information of books, admin, and students.
+          <p align="justify">Library Management System is built using C to manage the details of Admin, User, and Books.
+            Librarian and his assistants are the admin and students and faculty members are the users of this system.
+            The project is built at the administrator's end, so only the administrator has access. The purpose of the
+            project is to build an application to reduce the manual work for managing the information of books, admin,
+            and students.
           </p>
           <br>
           <div class="btn-container">
@@ -821,7 +778,6 @@
 
     </div>
   </section>
-
 </body>
 
 </html>
