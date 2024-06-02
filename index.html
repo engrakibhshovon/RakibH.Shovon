@@ -14,8 +14,13 @@
     * {
       margin: 0;
       padding: 0;
+    }
+
+
+    * {
       font-family: 'Times New Roman';
     }
+
 
     .title {
       font-size: 2rem;
@@ -24,6 +29,10 @@
 
     body {
       font-family: "Poppins", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     p {
@@ -161,7 +170,20 @@
       gap: 1rem;
     }
 
+
     /* ABOUT SECTION */
+
+    .text-container {
+      text-align: justify;
+    }
+
+
+
+
+    /* About Me Section */
+    #aboutMe {
+      position: relative;
+    }
 
     .aboutMe-section-container {
       display: flex;
@@ -169,19 +191,24 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
+      /* Align items vertically centered */
+      gap: 1rem;
     }
 
     .aboutMe-pic-container {
       flex: 0 0 30%;
+      /* Adjust width as needed */
     }
 
     .about-pic {
       height: 400px;
+      /* Set height to 200px */
       border-radius: 1rem;
     }
 
     .aboutMe-details-container {
       flex: 1;
+      /* Take remaining space */
       padding: 1rem;
     }
 
@@ -201,6 +228,9 @@
         padding: 0.5rem;
       }
     }
+
+
+
 
     #about {
       position: relative;
@@ -321,6 +351,7 @@
       margin-top: 1rem;
     }
 
+
     /* CONTACT */
 
     #contact {
@@ -362,6 +393,8 @@
       height: 2.5rem;
     }
 
+
+
     @media screen and (max-width: 768px) {
       .project {
         width: calc(50% - 1rem);
@@ -392,10 +425,26 @@
     }
 
     @media screen and (max-width: 1200px) {
+      #desktop-nav {
+        display: none;
+      }
+
+      #hamburger-nav {
+        display: flex;
+      }
+
+      #experience,
+      .experience-details-container {
+        margin-top: 2rem;
+      }
 
       #profile,
       .section-container {
         display: block;
+      }
+
+      .arrow {
+        display: none;
       }
 
       section,
@@ -448,6 +497,7 @@
 
   <section id="aboutMe">
     <h1 class="title">Biography</h1>
+    <br>
     <div class="aboutMe-section-container">
       <div class="aboutMe-pic-container">
         <img src="./assets/rakib.jpg" alt="Profile picture" class="about-pic" />
@@ -467,6 +517,9 @@
       </div>
     </div>
   </section>
+
+
+
 
 
   <section id="experience">
@@ -529,8 +582,7 @@
 
         <div class="details-container">
           <div class="article-container">
-            <p align="justify"><b><i>R. Hasan</i></b>, M. Islam, M. M. Hosen, M. Abdullah-Al-Kafi and N. Radhakrishnan,
-              "Predicting
+            <p align="justify">R. Hasan, M. Islam, M. M. Hosen, M. Abdullah-Al-Kafi and N. Radhakrishnan, "Predicting
               Diabetes in Women through Machine Learning," 2024 11th International Conference on Computing for
               Sustainable Global Development (INDIACom), New Delhi, India, 2024, pp. 1307-1311, doi:
               10.23919/INDIACom61295.2024.10499129.
@@ -552,8 +604,7 @@
 
         <div class="details-container">
           <div class="article-container">
-            <p align="justify"><b><i>R. Hasan</i></b>, F. Hasan, M. Hasan, M. Islam, M. Abdullah-Al-Kafi and M.
-              Karmakar, "Classifying
+            <p align="justify">R. Hasan, F. Hasan, M. Hasan, M. Islam, M. Abdullah-Al-Kafi and M. Karmakar, "Classifying
               Different Types of Smokers and Drinkers by Analyzing Body Signals using Machine Learning," 2024 11th
               International Conference on Computing for Sustainable Global Development (INDIACom), New Delhi, India,
               2024, pp. 1060-1064, doi: 10.23919/INDIACom61295.2024.10499139.
@@ -778,6 +829,7 @@
 
     </div>
   </section>
+
 </body>
 
 </html>
