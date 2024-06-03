@@ -14,13 +14,8 @@
     * {
       margin: 0;
       padding: 0;
-    }
-
-
-    * {
       font-family: 'Times New Roman';
     }
-
 
     .title {
       font-size: 2rem;
@@ -29,10 +24,6 @@
 
     body {
       font-family: "Poppins", sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     p {
@@ -74,6 +65,12 @@
       height: 400px;
       width: 400px;
       margin: auto 0;
+    }
+
+    .section__pic-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%;
     }
 
     .section__text {
@@ -170,20 +167,7 @@
       gap: 1rem;
     }
 
-
     /* ABOUT SECTION */
-
-    .text-container {
-      text-align: justify;
-    }
-
-
-
-
-    /* About Me Section */
-    #aboutMe {
-      position: relative;
-    }
 
     .aboutMe-section-container {
       display: flex;
@@ -191,24 +175,19 @@
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: center;
-      /* Align items vertically centered */
-      gap: 1rem;
     }
 
     .aboutMe-pic-container {
       flex: 0 0 30%;
-      /* Adjust width as needed */
     }
 
     .about-pic {
       height: 400px;
-      /* Set height to 200px */
       border-radius: 1rem;
     }
 
     .aboutMe-details-container {
       flex: 1;
-      /* Take remaining space */
       padding: 1rem;
     }
 
@@ -228,9 +207,6 @@
         padding: 0.5rem;
       }
     }
-
-
-
 
     #about {
       position: relative;
@@ -351,7 +327,6 @@
       margin-top: 1rem;
     }
 
-
     /* CONTACT */
 
     #contact {
@@ -393,8 +368,6 @@
       height: 2.5rem;
     }
 
-
-
     @media screen and (max-width: 768px) {
       .project {
         width: calc(50% - 1rem);
@@ -425,45 +398,83 @@
     }
 
     @media screen and (max-width: 1200px) {
-      #desktop-nav {
-        display: none;
-      }
-
-      #hamburger-nav {
-        display: flex;
-      }
-
-      #experience,
-      .experience-details-container {
-        margin-top: 2rem;
-      }
-
-      #profile,
-      .section-container {
-        display: block;
-      }
-
-      .arrow {
-        display: none;
-      }
-
-      section,
-      .section-container {
-        height: fit-content;
-      }
-
-      section {
-        margin: 0 5%;
+      #profile {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        margin: 0 2rem;
       }
 
       .section__pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
+        height: 200px;
+        width: 200px;
+        margin: 0 auto 2rem auto;
       }
 
-      .about-containers {
-        margin-top: 0;
+      .section__text {
+        align-self: center;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      section {
+        margin: 0 5rem;
+      }
+
+      #profile {
+        height: auto;
+        flex-direction: column;
+      }
+
+      .section__pic-container {
+        height: 150px;
+        width: 150px;
+      }
+
+      .section__text {
+        align-self: center;
+      }
+
+      .section__text__p2 {
+        font-size: 1.2rem;
+      }
+
+      .title1 {
+        font-size: 3rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      section {
+        margin: 0 2rem;
+      }
+
+      #profile {
+        height: auto;
+        flex-direction: column;
+      }
+
+      .section__pic-container {
+        height: 100px;
+        width: 100px;
+      }
+
+      .section__text {
+        align-self: center;
+      }
+
+      .section__text__p2 {
+        font-size: 1rem;
+      }
+
+      .title1 {
+        font-size: 2.5rem;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 0.5rem;
       }
     }
   </style>
@@ -471,10 +482,9 @@
 
 <body>
 
-
   <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/rakibhasan.png" alt="John Doe profile picture" />
+      <img src="./assets/rakibhasan.png" alt="Rakib Hasan Profile Picture" />
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hello, This is</p>
@@ -495,9 +505,8 @@
 
 
 
-  <section id="aboutMe">
+  <section id="experience">
     <h1 class="title">Biography</h1>
-    <br>
     <div class="aboutMe-section-container">
       <div class="aboutMe-pic-container">
         <img src="./assets/rakib.jpg" alt="Profile picture" class="about-pic" />
@@ -517,9 +526,6 @@
       </div>
     </div>
   </section>
-
-
-
 
 
   <section id="experience">
@@ -582,7 +588,8 @@
 
         <div class="details-container">
           <div class="article-container">
-            <p align="justify">R. Hasan, M. Islam, M. M. Hosen, M. Abdullah-Al-Kafi and N. Radhakrishnan, "Predicting
+            <p><b><i>R. Hasan</i></b>, M. Islam, M. M. Hosen, M. Abdullah-Al-Kafi and N. Radhakrishnan,
+              "Predicting
               Diabetes in Women through Machine Learning," 2024 11th International Conference on Computing for
               Sustainable Global Development (INDIACom), New Delhi, India, 2024, pp. 1307-1311, doi:
               10.23919/INDIACom61295.2024.10499129.
@@ -604,7 +611,8 @@
 
         <div class="details-container">
           <div class="article-container">
-            <p align="justify">R. Hasan, F. Hasan, M. Hasan, M. Islam, M. Abdullah-Al-Kafi and M. Karmakar, "Classifying
+            <p align="justify"><b><i>R. Hasan</i></b>, F. Hasan, M. Hasan, M. Islam, M. Abdullah-Al-Kafi and M.
+              Karmakar, "Classifying
               Different Types of Smokers and Drinkers by Analyzing Body Signals using Machine Learning," 2024 11th
               International Conference on Computing for Sustainable Global Development (INDIACom), New Delhi, India,
               2024, pp. 1060-1064, doi: 10.23919/INDIACom61295.2024.10499139.
@@ -829,7 +837,6 @@
 
     </div>
   </section>
-
 </body>
 
 </html>
