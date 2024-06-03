@@ -172,7 +172,7 @@
     }
 
     .aboutMe-pic-container {
-      flex: 0 0 20%;
+      flex: 0 0 10%;
       order: 2;
     }
 
@@ -191,18 +191,28 @@
       text-align: justify;
     }
 
+
     @media screen and (max-width: 768px) {
       .aboutMe-section-container {
         flex-direction: column;
         align-items: center;
       }
 
-      .aboutMe-pic-container,
+      .aboutMe-pic-container {
+        flex: 1 1 100%;
+        padding: 0.5rem;
+        order: 1;
+        /* Image should come after the text on small screens */
+      }
+
       .aboutMe-details-container {
         flex: 1 1 100%;
         padding: 0.5rem;
+        order: 2;
+        /* Text should come before the image on small screens */
       }
     }
+
 
     #about {
       position: relative;
