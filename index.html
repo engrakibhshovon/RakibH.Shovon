@@ -335,152 +335,134 @@
 
     /* Certificates section */
     #certificates {
-      text-align: center;
-    }
+  text-align: center;
+}
 
-    /* Carousel Container */
-    .carousel-container {
-      width: 100%;
-      /* Full width */
-      overflow: hidden;
-      /* Hide overflow */
-      position: relative;
-    }
+/* Carousel Container */
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
+  position: relative;
+}
 
-    /* Carousel */
-    .carousel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2px;
-      /* Gap between the images */
-      transition: transform 0.5s ease-in-out;
-    }
+/* Carousel */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px; /* Gap between the images */
+  transition: transform 0.5s ease-in-out;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap to each image on scroll */
+}
 
-    /* Carousel Item */
-    .carousel-item {
-      flex-shrink: 0;
-      width: 30px;
-      /* Smaller initial width for the images */
-      height: 315px;
-      /* Fixed height */
-      border: 0.1rem solid yellowgreen;
-      box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
-      border-radius: 9px;
-      overflow: hidden;
-      transition: width 0.3s ease;
-      cursor: pointer;
-    }
+/* Carousel Item */
+.carousel-item {
+  flex-shrink: 0;
+  width: 30px; /* Smaller initial width for the images */
+  height: 315px; /* Fixed height */
+  border: 0.1rem solid yellowgreen;
+  box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
+  border-radius: 9px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  cursor: pointer;
+  scroll-snap-align: center; /* Center the images on scroll */
+}
 
-    /* Image Styles */
-    .carousel-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
+/* Image Styles */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
 
-    /* Expanded state for the images */
-    .carousel-item.expanded {
-      width: 500px;
-      /* Set width to expand when active */
-      border: 0.1rem solid yellowgreen;
-      box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
-    }
+/* Expanded state for the images */
+.carousel-item.expanded {
+  width: 500px; /* Set width to expand when active */
+  border: 0.1rem solid yellowgreen;
+  box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
+}
 
-    .carousel-item.expanded img {
-      transform: scale(1.1);
-      /* Zoom effect for the expanded image */
-    }
+.carousel-item.expanded img {
+  transform: scale(1.1); /* Zoom effect for the expanded image */
+}
 
-    /* Taller middle item */
-    .carousel-item.middle {
-      height: 350px;
-      width: 500px;
-      /* Height for the middle item */
-    }
+/* Taller middle item */
+.carousel-item.middle {
+  height: 350px;
+  width: 500px; /* Height for the middle item */
+}
 
-    /* Ensure the carousel remains within a fixed area */
-    .carousel-container {
-      margin: 0 auto;
-      overflow-x: hidden;
-      /* No horizontal overflow */
-      padding: 20px 0;
-    }
+/* Ensure the carousel remains within a fixed area */
+.carousel-container {
+  margin: 0 auto;
+  overflow-x: hidden; /* No horizontal overflow */
+  padding: 20px 0;
+}
 
-    /* Hide scrollbars but allow scrolling via script */
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
+/* Hide scrollbars but allow scrolling via script */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
 
-    .carousel {
-      scrollbar-width: none;
-      /* For Firefox */
-    }
+.carousel {
+  scrollbar-width: none; /* For Firefox */
+}
 
-    /* Optional: Style for the next/previous controls */
-    .carousel-container::before,
-    .carousel-container::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: 50px;
-      height: 90px;
-      z-index: 2;
-      pointer-events: none;
-    }
+/* Optional: Style for the next/previous controls */
+.carousel-container::before,
+.carousel-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
 
-    .carousel-container::after {
-      right: 0;
-    }
+.carousel-container::after {
+  right: 0;
+}
 
-    /* Media Queries for Responsive Design */
-    @media (max-width: 768px) {
-      .carousel-item {
-        width: 40px;
-        /* Adjust width for smaller screens */
-        height: 200px;
-        /* Adjust height */
-      }
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 100px; /* Adjust width for smaller screens */
+    height: 200px; /* Adjust height */
+  }
 
-      .carousel-item.expanded {
-        width: 250px;
-        /* Adjust expanded width for smaller screens */
-      }
+  .carousel-item.expanded {
+    width: 250px; /* Adjust expanded width for smaller screens */
+  }
 
-      .carousel-item.middle {
-        height: 220px;
-        /* Height for the middle item on medium screens */
-      }
-    }
+  .carousel-item.middle {
+    height: 220px; /* Height for the middle item on medium screens */
+  }
+}
 
-    @media (max-width: 480px) {
-      .carousel-item {
-        width: 60px;
-        /* Further adjust width for very small screens */
-        height: 150px;
-        /* Further adjust height */
-      }
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 100px; /* Further adjust width for very small screens */
+    height: 150px; /* Further adjust height */
+  }
 
-      .carousel-item.expanded {
-        width: 200px;
-        /* Adjust expanded width for very small screens */
-      }
+  .carousel-item.expanded {
+    width: 200px; /* Adjust expanded width for very small screens */
+  }
 
-      .carousel-item.middle {
-        height: 170px;
-        /* Height for the middle item on small screens */
-      }
+  .carousel-item.middle {
+    height: 170px; /* Height for the middle item on small screens */
+  }
 
-      .carousel-container::before,
-      .carousel-container::after {
-        width: 30px;
-        /* Adjust control widths for small screens */
-        height: 60px;
-        /* Adjust control heights */
-      }
-    }
-
+  .carousel-container::before,
+  .carousel-container::after {
+    width: 30px; /* Adjust control widths for small screens */
+    height: 60px; /* Adjust control heights */
+  }
+}
 
 
     /* CONTACT */
