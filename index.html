@@ -335,53 +335,152 @@
 
     /* Certificates section */
     #certificates {
+      text-align: center;
+    }
+
+    /* Carousel Container */
+    .carousel-container {
+      width: 100%;
+      /* Full width */
+      overflow: hidden;
+      /* Hide overflow */
       position: relative;
     }
 
-    /* Carousel container for certificate section */
-    .carousel-container {
+    /* Carousel */
+    .carousel {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      margin: 2rem auto;
-      max-width: 100%;
-      /* Keeps container within viewport */
+      gap: 2px;
+      /* Gap between the images */
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* Carousel Item */
+    .carousel-item {
+      flex-shrink: 0;
+      width: 30px;
+      /* Smaller initial width for the images */
+      height: 315px;
+      /* Fixed height */
+      border: 0.1rem solid yellowgreen;
+      box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
+      border-radius: 9px;
       overflow: hidden;
-      /* Prevents wide overflow */
+      transition: width 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Image Styles */
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    /* Expanded state for the images */
+    .carousel-item.expanded {
+      width: 500px;
+      /* Set width to expand when active */
+      border: 0.1rem solid yellowgreen;
+      box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
+    }
+
+    .carousel-item.expanded img {
+      transform: scale(1.1);
+      /* Zoom effect for the expanded image */
+    }
+
+    /* Taller middle item */
+    .carousel-item.middle {
+      height: 350px;
+      width: 500px;
+      /* Height for the middle item */
+    }
+
+    /* Ensure the carousel remains within a fixed area */
+    .carousel-container {
+      margin: 0 auto;
+      overflow-x: hidden;
+      /* No horizontal overflow */
+      padding: 20px 0;
+    }
+
+    /* Hide scrollbars but allow scrolling via script */
+    .carousel::-webkit-scrollbar {
+      display: none;
     }
 
     .carousel {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
+      scrollbar-width: none;
+      /* For Firefox */
     }
 
-    .carousel-item {
-      min-width: 100%;
-      box-sizing: border-box;
-      text-align: center;
-      padding: 0 10px;
+    /* Optional: Style for the next/previous controls */
+    .carousel-container::before,
+    .carousel-container::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 90px;
+      z-index: 2;
+      pointer-events: none;
     }
 
-    /* Image styling with rounded border and shadow */
-    .carousel-item img {
-      width: 700px;
-      height: 390px;
-      object-fit: cover;
-      border-radius: 1.5rem;
-      border: 0.1rem solid yellowgreen;
-      box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
-      margin: 0 auto;
-      /* Centers images within their container */
+    .carousel-container::after {
+      right: 0;
     }
 
-    /* Mobile and small screens adjustments */
+    /* Media Queries for Responsive Design */
     @media (max-width: 768px) {
-      .carousel-item img {
-        max-width: 100%;
+      .carousel-item {
+        width: 40px;
+        /* Adjust width for smaller screens */
+        height: 200px;
+        /* Adjust height */
+      }
+
+      .carousel-item.expanded {
+        width: 250px;
+        /* Adjust expanded width for smaller screens */
+      }
+
+      .carousel-item.middle {
+        height: 220px;
+        /* Height for the middle item on medium screens */
       }
     }
+
+    @media (max-width: 480px) {
+      .carousel-item {
+        width: 60px;
+        /* Further adjust width for very small screens */
+        height: 150px;
+        /* Further adjust height */
+      }
+
+      .carousel-item.expanded {
+        width: 200px;
+        /* Adjust expanded width for very small screens */
+      }
+
+      .carousel-item.middle {
+        height: 170px;
+        /* Height for the middle item on small screens */
+      }
+
+      .carousel-container::before,
+      .carousel-container::after {
+        width: 30px;
+        /* Adjust control widths for small screens */
+        height: 60px;
+        /* Adjust control heights */
+      }
+    }
+
 
 
     /* CONTACT */
@@ -865,46 +964,46 @@
           <img src="./assets/Certificate3.png" alt="Certificate 3">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate4.png" alt="Certificate 1">
+          <img src="./assets/Certificate4.png" alt="Certificate 4">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate5.png" alt="Certificate 2">
+          <img src="./assets/Certificate5.png" alt="Certificate 5">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate6.png" alt="Certificate 3">
+          <img src="./assets/Certificate6.png" alt="Certificate 6">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate7.png" alt="Certificate 1">
+          <img src="./assets/Certificate7.png" alt="Certificate 7">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate8.jpg" alt="Certificate 2">
+          <img src="./assets/Certificate8.jpg" alt="Certificate 8">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate9.jpeg" alt="Certificate 3">
+          <img src="./assets/Certificate9.jpeg" alt="Certificate 9">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate10.png" alt="Certificate 1">
+          <img src="./assets/Certificate10.png" alt="Certificate 10">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate11.jpg" alt="Certificate 2">
+          <img src="./assets/Certificate11.jpg" alt="Certificate 11">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate12.jpeg" alt="Certificate 3">
+          <img src="./assets/Certificate12.jpeg" alt="Certificate 12">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate13.jpeg" alt="Certificate 1">
+          <img src="./assets/Certificate13.jpeg" alt="Certificate 13">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate14.jpeg" alt="Certificate 2">
+          <img src="./assets/Certificate14.jpeg" alt="Certificate 14">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate15.jpeg" alt="Certificate 3">
+          <img src="./assets/Certificate15.jpeg" alt="Certificate 15">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate16.jpeg" alt="Certificate 1">
+          <img src="./assets/Certificate16.jpeg" alt="Certificate 16">
         </div>
         <div class="carousel-item">
-          <img src="./assets/Certificate17.jpeg" alt="Certificate 2">
+          <img src="./assets/Certificate17.jpeg" alt="Certificate 17">
         </div>
       </div>
     </div>
@@ -912,18 +1011,42 @@
 
 
   <script>
-    let currentIndex = 0;
+    const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
 
-    function moveCarousel() {
-      const carousel = document.querySelector('.carousel');
-      const items = document.querySelectorAll('.carousel-item');
-      currentIndex = (currentIndex + 1) % items.length; // Move to the next index
-
-      const translateX = -currentIndex * 100;
-      carousel.style.transform = `translateX(${translateX}%)`;
+    function setMiddleItemExpanded() {
+      // Get the index of the middle item
+      const middleIndex = Math.floor(items.length / 2);
+      items[middleIndex].classList.add('expanded', 'middle'); // Expand and make the middle item taller
     }
 
-    setInterval(moveCarousel, 3000); // Change image every 3 seconds
+    // Initialize the carousel with the middle item expanded
+    setMiddleItemExpanded();
+
+    items.forEach((item, index) => {
+      item.addEventListener('mouseenter', () => {
+        // On hover, expand the hovered item
+        item.classList.add('expanded');
+
+        // Minimize the middle item if it's not the hovered one
+        const middleIndex = Math.floor(items.length / 2);
+        if (index !== middleIndex) {
+          items[middleIndex].classList.remove('expanded');
+          items[middleIndex].classList.remove('middle'); // Remove the middle class if not hovered
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        // On mouse leave, remove the hover effect
+        item.classList.remove('expanded');
+
+        // Check if the middle item needs to be expanded again
+        const middleIndex = Math.floor(items.length / 2);
+        if (item !== items[middleIndex]) {
+          items[middleIndex].classList.add('expanded', 'middle'); // Add back the middle class
+        }
+      });
+    });
   </script>
 
 
