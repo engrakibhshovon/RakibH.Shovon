@@ -341,11 +341,10 @@
     /* Carousel Container */
     .carousel-container {
       width: 100%;
+      /* Full width */
       overflow: hidden;
       /* Hide overflow */
       position: relative;
-      padding: 0 20px;
-      /* Add padding to the left and right */
     }
 
     /* Carousel */
@@ -356,10 +355,6 @@
       gap: 2px;
       /* Gap between the images */
       transition: transform 0.5s ease-in-out;
-      overflow-x: auto;
-      /* Allow horizontal scrolling */
-      scroll-snap-type: x mandatory;
-      /* Snap to each image on scroll */
     }
 
     /* Carousel Item */
@@ -375,8 +370,6 @@
       overflow: hidden;
       transition: width 0.3s ease;
       cursor: pointer;
-      scroll-snap-align: center;
-      /* Center the images on scroll */
     }
 
     /* Image Styles */
@@ -413,7 +406,6 @@
       overflow-x: hidden;
       /* No horizontal overflow */
       padding: 20px 0;
-      /* Top and bottom padding */
     }
 
     /* Hide scrollbars but allow scrolling via script */
@@ -445,7 +437,7 @@
     /* Media Queries for Responsive Design */
     @media (max-width: 768px) {
       .carousel-item {
-        width: 100px;
+        width: 40px;
         /* Adjust width for smaller screens */
         height: 200px;
         /* Adjust height */
@@ -464,7 +456,7 @@
 
     @media (max-width: 480px) {
       .carousel-item {
-        width: 100px;
+        width: 60px;
         /* Further adjust width for very small screens */
         height: 150px;
         /* Further adjust height */
@@ -488,6 +480,7 @@
         /* Adjust control heights */
       }
     }
+
 
 
     /* CONTACT */
