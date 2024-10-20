@@ -258,20 +258,64 @@
       margin: auto 0;
     }
 
-    /* EXPERIENCE SECTION */
 
-    #experience {
+    /* Education SECTION */
+
+    #education {
       position: relative;
     }
 
-    .experience-sub-title {
+    .education-sub-title {
       color: rgb(85, 85, 85);
       font-weight: 600;
       font-size: 1.2rem;
       margin: 2rem;
     }
 
-    .experience-details-container {
+    .education-details-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 2rem auto;
+    }
+
+    .article-container {
+      display: flex;
+      text-align: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 2.5rem;
+      font-size: 1rem;
+      justify-content: space-around;
+    }
+
+    article {
+      display: flex;
+      width: 10rem;
+      justify-content: space-around;
+      gap: 0.5rem;
+    }
+
+    article .icon {
+      cursor: default;
+    }
+
+
+
+    /* Publication SECTION */
+
+    #publications {
+      position: relative;
+    }
+
+    .publications-sub-title {
+      color: rgb(85, 85, 85);
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 2rem;
+    }
+
+    .publications-details-container {
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -300,6 +344,18 @@
     }
 
     /* PROJECTS SECTION */
+    #projects {
+      position: relative;
+    }
+
+    .projects-sub-title {
+      color: rgb(85, 85, 85);
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 2rem;
+    }
+
+
     .projects-container {
       display: flex;
       flex-wrap: wrap;
@@ -482,7 +538,6 @@
     }
 
 
-
     /* CONTACT */
 
     #contact {
@@ -524,9 +579,22 @@
       height: 2.5rem;
     }
 
+    /* Media Queries */
     @media screen and (max-width: 768px) {
       .project {
         width: calc(50% - 1rem);
+      }
+
+      /* Adjust images in contact section for mobile */
+      #contact img {
+        max-width: 80%;
+        /* Ensures the image fits within the container */
+        height: auto;
+        /* Maintains aspect ratio */
+        display: block;
+        /* Centers the image */
+        margin: 0 auto;
+        /* Centers the image horizontally */
       }
     }
 
@@ -534,9 +602,21 @@
       .project {
         width: 100%;
       }
+
+      /* Further adjust images in contact section for smaller screens */
+      #contact img {
+        max-width: 95%;
+        /* More room for smaller screens */
+        height: auto;
+        /* Maintains aspect ratio */
+        display: block;
+        /* Centers the image */
+        margin: 0 auto;
+        /* Centers the image horizontally */
+      }
     }
 
-    /* Media Queries */
+    /* Other Media Queries */
     @media screen and (max-width: 1400px) {
       #profile {
         height: 83vh;
@@ -631,14 +711,14 @@
   </section>
 
 
-  <section id="experience">
+  <section id="education">
     <h1 class="title">Education</h1>
-    <div class="experience-details-container">
+    <div class="education-details-container">
       <div class="about-containers">
 
         <div class="details-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
-          <h2 class="experience-sub-title">B.Sc.</h2>
+          <h2 class="education-sub-title">B.Sc.</h2>
           <div class="article-container">
             <p>CGPA: 3.85 out of 4.00 [CSE, So Far]</p>
           </div>
@@ -647,7 +727,7 @@
 
         <div class="details-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
-          <h2 class="experience-sub-title">HSC</h2>
+          <h2 class="education-sub-title">HSC</h2>
           <div class="article-container">
             <p>GPA: 4.92 out of 5.00 [Science]</p>
           </div>
@@ -655,7 +735,7 @@
 
         <div class="details-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
-          <h2 class="experience-sub-title">SSC</h2>
+          <h2 class="education-sub-title">SSC</h2>
           <div class="article-container">
             <p>GPA: 5.00 out of 5.00 [Science]</p>
           </div>
@@ -665,7 +745,7 @@
 
         <div class="details-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
-          <h2 class="experience-sub-title">JSC</h2>
+          <h2 class="education-sub-title">JSC</h2>
           <div class="article-container">
             <p>GPA: 5.00 out of 5.00</p>
           </div>
@@ -675,7 +755,7 @@
 
         <div class="details-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
-          <h2 class="experience-sub-title">Primary School Certificate</h2>
+          <h2 class="education-sub-title">Primary School Certificate</h2>
           <div class="article-container">
             <p>GPA: 5.00 out of 5.00 [Additionally Awarded General Grade Scholarship]</p>
           </div>
@@ -689,9 +769,9 @@
 
 
 
-  <section id="experience">
+  <section id="publications">
     <h1 class="title">Publications</h1>
-    <div class="experience-details-container">
+    <div class="publications-details-container">
       <div class="about-containers">
 
         <div class="details-container">
@@ -751,7 +831,7 @@
           <div class="article-container">
             <img src="./assets/quiz.png" alt="Quiz App" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">Quiz Application</h2>
+          <h2 class="projects-sub-title project-title">Quiz Application</h2>
           <p align="justify">Quiz Application, developed with HTML, CSS, JavaScript, and PHP, enhances learning
             experience with comprehensive functionalities. Administrators manage users by adding and removing teachers
             and students, while teachers create and manage diverse quiz topics. Students benefit from accessing default
@@ -779,7 +859,7 @@
           <div class="article-container">
             <img src="./assets/safe-gurad.png" alt="Safe-Guard" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">Safe-Guard</h2>
+          <h2 class="projects-sub-title project-title">Safe-Guard</h2>
           <p align="justify">Safe-Guard is an advanced IoT-based safety monitoring system engineered to safeguard indoor
             environments from fire hazards and gas leaks in real-time. Integrated sensors continuously monitor air
             quality parameters like LPG, CO, and smoke levels, aiming to mitigate risks and ensure occupants' safety.
@@ -808,7 +888,7 @@
           <div class="article-container">
             <img src="./assets/portfolio.png" alt="Portfolio App" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">Portfolio App</h2>
+          <h2 class="projects-sub-title project-title">Portfolio App</h2>
           <p align="justify">Portfolio Application aims to develop a dynamic and interactive app using Flutter,
             integrating a calculator, quiz, and weather app. This transformation showcases static information like bio,
             skills, projects, and achievements while providing practical, interactive tools. By incorporating these
@@ -836,7 +916,7 @@
           <div class="article-container">
             <img src="./assets/motu.png" alt="Voice Assistant MOTU" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">MOTU</h2>
+          <h2 class="projects-sub-title project-title">MOTU</h2>
           <p align="justify">MOTU Voice Assistant, developed using Python, takes action by user commands, improving
             productivity by managing tasks like weather updates, time telling, providing top news, and information from
             online sources, playing videos from YouTube, telling jokes, random facts, and more. The purpose of the
@@ -865,7 +945,7 @@
           <div class="article-container">
             <img src="./assets/resturant.png" alt="Resturant Management" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">R.M.S</h2>
+          <h2 class="projects-sub-title project-title">R.M.S</h2>
           <p align="justify">The Restaurant Management System is constructed using assembly language to efficiently
             manage the details of the food menu and prices. Administrators, typically cashiers or managers, have
             exclusive access to this system. The primary objective behind this project is to develop an application
@@ -894,7 +974,7 @@
           <div class="article-container">
             <img src="./assets/calculator.png" alt="Caluclator by Shell Script" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">Caluclator</h2>
+          <h2 class="projects-sub-title project-title">Caluclator</h2>
           <p align="justify">The calculator developed using a shell script in Linux offers a range of functionalities.
             It supports arithmetic operations like addition, subtraction, multiplication, and division, along with
             exponentiation, square root calculation, and logarithmic functions. Additionally, it provides capabilities
@@ -924,7 +1004,7 @@
           <div class="article-container">
             <img src="./assets/library.png" alt="Library Management System" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">L.M.S</h2>
+          <h2 class="projects-sub-title project-title">L.M.S</h2>
           <p align="justify">Library Management System is built using C to manage the details of Admin, User, and Books.
             Librarian and his assistants are the admin and students and faculty members are the users of this system.
             The project is built at the administrator's end, so only the administrator has access. The purpose of the
