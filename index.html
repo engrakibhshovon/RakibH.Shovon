@@ -280,12 +280,11 @@
 
     .eabout-containers {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
     }
 
     .edetails-container {
-      text-align: center;
       padding: 1.5rem;
       flex: 1;
       background: white;
@@ -299,17 +298,28 @@
       font-size: 1rem;
     }
 
+    /* Make the last item take full width of the last row */
+    .eabout-containers>.edetails-container:last-child {
+      grid-column: span 2;
+      /* Makes the last item span all 3 columns */
+    }
+
     /* Responsive adjustments */
     @media (max-width: 1024px) {
       .eabout-containers {
         grid-template-columns: repeat(2, 1fr);
         /* 2 items per row on medium screens */
       }
+
+      .eabout-containers>.edetails-container:last-child {
+        grid-column: span 2;
+        /* Makes the last item span all 2 columns on medium screens */
+      }
     }
 
     @media (max-width: 600px) {
       .eabout-containers {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         /* 1 item per row on small screens */
       }
 
@@ -319,6 +329,11 @@
 
       .earticle-container {
         font-size: 0.9rem;
+      }
+
+      .eabout-containers>.edetails-container:last-child {
+        grid-column: span 2;
+        /* Ensures the last item spans 1 column on mobile */
       }
     }
 
@@ -354,15 +369,31 @@
       font-size: 1rem;
     }
 
+    /* Make the last item take full width of the last row */
+    .pabout-containers>.details-container:last-child {
+      grid-column: span 2;
+      /* Makes the last item span all 2 columns */
+    }
+
     /* Responsive adjustments */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .pabout-containers {
-        grid-template-columns: 1fr;
-        /* Switch to single column on tablets and smaller screens */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row on medium screens */
+      }
+
+      .pabout-containers>.details-container:last-child {
+        grid-column: span 2;
+        /* Makes the last item span all 2 columns on medium screens */
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
+      .pabout-containers {
+        grid-template-columns: 1fr;
+        /* Switch to single column on small screens */
+      }
+
       .publications-sub-title {
         font-size: 1rem;
       }
@@ -371,8 +402,12 @@
         font-size: 0.9rem;
         /* Adjust font size for better readability on small screens */
       }
-    }
 
+      .pabout-containers>.details-container:last-child {
+        grid-column: span 1;
+        /* Ensures the last item spans 1 column on mobile */
+      }
+    }
 
 
     /* PROJECTS SECTION */
