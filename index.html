@@ -278,25 +278,48 @@
       margin: 2rem auto;
     }
 
-    .article-container {
-      display: flex;
+    .eabout-containers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .edetails-container {
       text-align: center;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 2.5rem;
+      padding: 1.5rem;
+      flex: 1;
+      background: white;
+      border-radius: 2rem;
+      text-align: center;
+      border: 0.1rem solid yellowgreen;
+      box-shadow: 0 2px 4px rgba(189, 241, 92, 0.441);
+    }
+
+    .earticle-container {
       font-size: 1rem;
-      justify-content: space-around;
     }
 
-    article {
-      display: flex;
-      width: 10rem;
-      justify-content: space-around;
-      gap: 0.5rem;
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .eabout-containers {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 items per row on medium screens */
+      }
     }
 
-    article .icon {
-      cursor: default;
+    @media (max-width: 600px) {
+      .eabout-containers {
+        grid-template-columns: 1fr;
+        /* 1 item per row on small screens */
+      }
+
+      .education-sub-title {
+        font-size: 1rem;
+      }
+
+      .earticle-container {
+        font-size: 0.9rem;
+      }
     }
 
 
@@ -320,26 +343,37 @@
       margin: 2rem auto;
     }
 
-    .article-container {
-      display: flex;
+    .pabout-containers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .particle-container {
       text-align: center;
-      flex-wrap: wrap;
-      flex-direction: row;
-      gap: 2.5rem;
       font-size: 1rem;
-      justify-content: space-around;
     }
 
-    article {
-      display: flex;
-      width: 10rem;
-      justify-content: space-around;
-      gap: 0.5rem;
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .pabout-containers {
+        grid-template-columns: 1fr;
+        /* Switch to single column on tablets and smaller screens */
+      }
     }
 
-    article .icon {
-      cursor: default;
+    @media (max-width: 480px) {
+      .publications-sub-title {
+        font-size: 1rem;
+      }
+
+      .particle-container {
+        font-size: 0.9rem;
+        /* Adjust font size for better readability on small screens */
+      }
     }
+
+
 
     /* PROJECTS SECTION */
     #projects {
@@ -711,49 +745,49 @@
   <section id="education">
     <h1 class="title">Education</h1>
     <div class="education-details-container">
-      <div class="about-containers">
+      <div class="eabout-containers">
 
-        <div class="details-container">
+        <div class="edetails-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
           <h2 class="education-sub-title">B.Sc.</h2>
-          <div class="article-container">
+          <div class="earticle-container">
             <p>CGPA: 3.85 out of 4.00 [CSE, So Far]</p>
           </div>
         </div>
 
 
-        <div class="details-container">
+        <div class="edetails-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
           <h2 class="education-sub-title">H.S.C.</h2>
-          <div class="article-container">
+          <div class="earticle-container">
             <p>GPA: 4.92 out of 5.00 [Science]</p>
           </div>
         </div>
 
-        <div class="details-container">
+        <div class="edetails-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
           <h2 class="education-sub-title">S.S.C.</h2>
-          <div class="article-container">
+          <div class="earticle-container">
             <p>GPA: 5.00 out of 5.00 [Science]</p>
           </div>
         </div>
 
 
 
-        <div class="details-container">
+        <div class="edetails-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
           <h2 class="education-sub-title">J.S.C.</h2>
-          <div class="article-container">
+          <div class="earticle-container">
             <p>GPA: 5.00 out of 5.00</p>
           </div>
         </div>
 
 
 
-        <div class="details-container">
+        <div class="edetails-container">
           <img width="50" src="./assets/achivement.png" alt="achivement" />
           <h2 class="education-sub-title">P.S.C.</h2>
-          <div class="article-container">
+          <div class="earticle-container">
             <p>GPA: 5.00 out of 5.00 [Additionally Awarded General Grade Scholarship]</p>
           </div>
         </div>
@@ -769,10 +803,10 @@
   <section id="publications">
     <h1 class="title">Publications</h1>
     <div class="publications-details-container">
-      <div class="about-containers">
+      <div class="pabout-containers">
 
         <div class="details-container">
-          <div class="article-container">
+          <div class="particle-container">
             <p align="justify"><b><i>Rakib Hasan</i></b>, Muksitul Islam, Md Mamun Hosen, Md Abdullah-Al-Kafi, and
               Niranchana Radhakrishnan. "Predicting Diabetes in Women through Machine Learning." In 2024 11th
               International Conference on Computing for Sustainable Global Development (INDIACom), pp. 1307-1311. IEEE,
@@ -794,7 +828,7 @@
 
 
         <div class="details-container">
-          <div class="article-container">
+          <div class="particle-container">
             <p align="justify"><b><i>Rakib Hasan</i></b>, Ferdous Hasan, Mehedi Hasan, Muksitul Islam, Md
               Abdullah-Al-Kafi, and Mousumi Karmakar. "Classifying Different Types of Smokers and Drinkers by Analyzing
               Body Signals using Machine Learning." In 2024 11th International Conference on Computing for Sustainable
@@ -806,6 +840,27 @@
               <button class="btn btn-color-2 project-btn"
                 onclick="location.href='https://ieeexplore.ieee.org/document/10499139'">
                 Read Paper
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="details-container">
+          <div class="particle-container">
+            <p align="justify"><b><i>Hasan, Rakib</i></b>; Hosen, Md. Mamun; Ahad, Md Taimur; Emon, Yousuf Rayhan;
+              Oyshi,
+              Ms. Nushrat (2024), “Dataset on Cognitive Control, Emotional Triggers, Body Image, Salience, and Habit
+              Formation to Investigate Neurological Aspects of Eating Disorders”, Mendeley Data, V1, doi:
+              10.17632/w8vppbf9br.1.<br><br>
+              <span style="display: block; text-align: right;"><i><b>[Mendeley Data - Dataset]</b></i></span>
+            </p>
+
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://data.mendeley.com/datasets/w8vppbf9br/1'">
+                Read Dataset
               </button>
             </div>
 
