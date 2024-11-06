@@ -390,7 +390,7 @@
 
     @media (max-width: 600px) {
       .pabout-containers {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         /* Switch to single column on small screens */
       }
 
@@ -404,7 +404,7 @@
       }
 
       .pabout-containers>.details-container:last-child {
-        grid-column: span 2;
+        grid-column: span 1;
         /* Ensures the last item spans 1 column on mobile */
       }
     }
