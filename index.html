@@ -369,10 +369,16 @@
       font-size: 1rem;
     }
 
-    /* Make the last item take full width of the last row */
+    /* Handle last row spanning behavior */
     .pabout-containers>.details-container:last-child {
+      grid-column: auto;
+      /* Default behavior: no span */
+    }
+
+    /* If there's only one item in the last row */
+    .pabout-containers>.details-container:nth-last-child(1):nth-child(odd) {
       grid-column: span 2;
-      /* Makes the last item span all 2 columns */
+      /* Span the full width if it's the only item */
     }
 
     /* Responsive adjustments */
@@ -382,9 +388,13 @@
         /* 2 items per row on medium screens */
       }
 
+      /* Same logic for medium screens */
       .pabout-containers>.details-container:last-child {
+        grid-column: auto;
+      }
+
+      .pabout-containers>.details-container:nth-last-child(1):nth-child(odd) {
         grid-column: span 2;
-        /* Makes the last item span all 2 columns on medium screens */
       }
     }
 
@@ -403,11 +413,12 @@
         /* Adjust font size for better readability on small screens */
       }
 
+      /* On mobile, last item will naturally span full width */
       .pabout-containers>.details-container:last-child {
         grid-column: span 1;
-        /* Ensures the last item spans 1 column on mobile */
       }
     }
+
 
 
     /* PROJECTS SECTION */
@@ -845,7 +856,8 @@
             <p align="justify"><b><i>Hasan, Rakib</i></b>; Hosen, Md. Mamun; Ahad, Md Taimur; Emon, Yousuf Rayhan;
               Oyshi,
               Ms. Nushrat (2024), “Dataset on Cognitive Control, Emotional Triggers, Body Image, Salience, and Habit
-              Formation to Investigate Neurological Aspects of Eating Disorders”, Mendeley Data, V2, doi: 10.17632/w8vppbf9br.2.<br><br>
+              Formation to Investigate Neurological Aspects of Eating Disorders”, Mendeley Data, V2, doi:
+              10.17632/w8vppbf9br.2.<br><br>
               <span style="display: block; text-align: right;"><i><b>[Mendeley Data - Dataset]</b></i></span>
             </p>
 
@@ -858,7 +870,6 @@
 
           </div>
         </div>
-
 
 
 
